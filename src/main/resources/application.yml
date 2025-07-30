@@ -1,0 +1,98 @@
+spring:
+  application:
+    name: ElderMindLLMServer
+  ai:
+    zhipuai:
+      api-key: ${ZHIPUAI_API_KEY:your-api-key-here}
+      chat:
+        options:
+          model: glm-4.1v-thinking-flashx
+          temperature: 0.7
+          max-tokens: 8192
+
+server:
+  port: 8080
+
+# LLM推理配置
+llm:
+  inference:
+    enabled: true
+    mode: api  # api 或 custom
+    model: glm-4.1v-thinking-flashx  # 智谱AI模型名称
+    timeout: 60  # 推理超时时间（秒）
+    max-retries: 3  # 最大重试次数
+    
+    # 触发条件配置
+    trigger-conditions:
+      all-events: false  # 是否对所有事件进行推理
+      max-confidence: 0.8  # 最大置信度阈值
+      min-confidence: 0.1  # 最小置信度阈值
+      target-actions-only: false  # 仅对目标动作推理
+      critical-actions-only: false  # 仅对关键动作推理
+    
+    # 提示词配置
+    prompt-config:
+      system-prompt: |
+        你是一名智能视频监测系统，专注于监测人类在室内的行为事件。
+        请分析该视频并识别是否发生了以下关键事件：
+
+        {ACTION_LIST}
+
+        请以结构化JSON格式输出识别结果，示例如下：
+        {
+          "detected_action": {
+            "action_id": 42,
+            "chinese_name": "摔倒",
+            "english_name": "falling",
+            "category": "紧急情况",
+            "priority_level": "最高"
+          },
+          "analysis": {
+            "confidence": 0.95,
+            "description": "检测到人员摔倒，需要立即关注",
+            "risk_assessment": "紧急",
+            "requires_immediate_attention": true
+          },
+          "recommendations": {
+            "alert_level": "紧急",
+            "suggested_actions": ["立即派遣医护人员", "通知紧急联系人"],
+            "monitoring_priority": "最高"
+          }
+        }
+      user-prompt: "请仔细分析这个视频中的人体动作行为。"
+    
+    # 结果处理配置
+    result-processing:
+      save-results: true
+      results-dir: "llm_results"
+      include-video-path: true
+    
+    # 限流配置
+    rate-limiter:
+      enabled: true
+      max-concurrent-requests: 3  # 最大并发请求数
+      max-requests-per-minute: 30  # 每分钟最大请求数
+      max-requests-per-hour: 500  # 每小时最大请求数
+      queue-timeout: 30  # 队列等待超时时间（秒）
+      retry-delay: 1.0  # 重试延迟时间（秒）
+
+# 日志配置
+logging:
+  level:
+    com.zq.eldermindllmserver: DEBUG
+    org.springframework.ai: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/eldermind-llm.log
+
+# 管理端点配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always

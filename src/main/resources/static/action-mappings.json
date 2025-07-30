@@ -1,0 +1,477 @@
+{
+  "actions": {
+    "0": {
+      "english": "drink water",
+      "chinese": "喝水",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "1": {
+      "english": "eat meal/snack",
+      "chinese": "吃饭/吃零食",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "2": {
+      "english": "brushing teeth",
+      "chinese": "刷牙",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "3": {
+      "english": "brushing hair",
+      "chinese": "梳头",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "4": {
+      "english": "drop",
+      "chinese": "掉落物品",
+      "category": "意外事件",
+      "risk_level": "中",
+      "is_critical": true
+    },
+    "5": {
+      "english": "pickup",
+      "chinese": "捡起物品",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "6": {
+      "english": "throw",
+      "chinese": "投掷",
+      "category": "动作行为",
+      "risk_level": "中",
+      "is_critical": false
+    },
+    "7": {
+      "english": "sitting down",
+      "chinese": "坐下",
+      "category": "基本动作",
+      "risk_level": "低",
+      "is_critical": true
+    },
+    "8": {
+      "english": "standing up",
+      "chinese": "起立",
+      "category": "基本动作",
+      "risk_level": "低",
+      "is_critical": true
+    },
+    "9": {
+      "english": "clapping",
+      "chinese": "鼓掌",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "10": {
+      "english": "reading",
+      "chinese": "阅读",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "11": {
+      "english": "writing",
+      "chinese": "写字",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "12": {
+      "english": "tear up paper",
+      "chinese": "撕纸",
+      "category": "动作行为",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "13": {
+      "english": "wear jacket",
+      "chinese": "穿外套",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "14": {
+      "english": "take off jacket",
+      "chinese": "脱外套",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "15": {
+      "english": "wear a shoe",
+      "chinese": "穿鞋",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "16": {
+      "english": "take off a shoe",
+      "chinese": "脱鞋",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "17": {
+      "english": "wear on glasses",
+      "chinese": "戴眼镜",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "18": {
+      "english": "take off glasses",
+      "chinese": "摘眼镜",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "19": {
+      "english": "put on a hat/cap",
+      "chinese": "戴帽子",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "20": {
+      "english": "take off a hat/cap",
+      "chinese": "摘帽子",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "21": {
+      "english": "cheer up",
+      "chinese": "欢呼",
+      "category": "情绪表达",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "22": {
+      "english": "hand waving",
+      "chinese": "挥手",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "23": {
+      "english": "kicking something",
+      "chinese": "踢东西",
+      "category": "动作行为",
+      "risk_level": "中",
+      "is_critical": false
+    },
+    "24": {
+      "english": "reach into pocket",
+      "chinese": "伸手进口袋",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "25": {
+      "english": "hopping",
+      "chinese": "单脚跳",
+      "category": "运动行为",
+      "risk_level": "中",
+      "is_critical": false
+    },
+    "26": {
+      "english": "jump up",
+      "chinese": "跳跃",
+      "category": "运动行为",
+      "risk_level": "中",
+      "is_critical": false
+    },
+    "27": {
+      "english": "make a phone call",
+      "chinese": "打电话",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "28": {
+      "english": "playing with phone/tablet",
+      "chinese": "玩手机/平板",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "29": {
+      "english": "typing on a keyboard",
+      "chinese": "打字",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "30": {
+      "english": "pointing to something",
+      "chinese": "指向某物",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "31": {
+      "english": "taking a selfie",
+      "chinese": "自拍",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "32": {
+      "english": "check time",
+      "chinese": "看时间",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "33": {
+      "english": "rub two hands together",
+      "chinese": "搓手",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "34": {
+      "english": "nod head/bow",
+      "chinese": "点头/鞠躬",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "35": {
+      "english": "shake head",
+      "chinese": "摇头",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "36": {
+      "english": "wipe face",
+      "chinese": "擦脸",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "37": {
+      "english": "salute",
+      "chinese": "敬礼",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "38": {
+      "english": "put palms together",
+      "chinese": "合掌",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "39": {
+      "english": "cross hands in front",
+      "chinese": "双手交叉在前",
+      "category": "手势动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "40": {
+      "english": "sneeze/cough",
+      "chinese": "打喷嚏/咳嗽",
+      "category": "健康状况",
+      "risk_level": "中",
+      "is_critical": true
+    },
+    "41": {
+      "english": "staggering",
+      "chinese": "蹒跚/摇摆",
+      "category": "异常行为",
+      "risk_level": "高",
+      "is_critical": true
+    },
+    "42": {
+      "english": "falling",
+      "chinese": "摔倒",
+      "category": "紧急情况",
+      "risk_level": "紧急",
+      "is_critical": true
+    },
+    "43": {
+      "english": "touch head",
+      "chinese": "摸头",
+      "category": "健康状况",
+      "risk_level": "中",
+      "is_critical": true
+    },
+    "44": {
+      "english": "touch chest",
+      "chinese": "摸胸部",
+      "category": "健康状况",
+      "risk_level": "中",
+      "is_critical": true
+    },
+    "45": {
+      "english": "touch back",
+      "chinese": "摸背部",
+      "category": "健康状况",
+      "risk_level": "中",
+      "is_critical": true
+    },
+    "46": {
+      "english": "touch neck",
+      "chinese": "摸脖子",
+      "category": "健康状况",
+      "risk_level": "中",
+      "is_critical": true
+    },
+    "47": {
+      "english": "nausea or vomiting",
+      "chinese": "恶心或呕吐",
+      "category": "紧急情况",
+      "risk_level": "紧急",
+      "is_critical": true
+    },
+    "48": {
+      "english": "use a fan",
+      "chinese": "使用扇子",
+      "category": "日常活动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "49": {
+      "english": "punching/slapping",
+      "chinese": "打击/拍打",
+      "category": "攻击行为",
+      "risk_level": "高",
+      "is_critical": true
+    },
+    "50": {
+      "english": "kicking other person",
+      "chinese": "踢他人",
+      "category": "攻击行为",
+      "risk_level": "高",
+      "is_critical": true
+    },
+    "51": {
+      "english": "pushing other person",
+      "chinese": "推他人",
+      "category": "攻击行为",
+      "risk_level": "高",
+      "is_critical": true
+    },
+    "52": {
+      "english": "pat on back",
+      "chinese": "拍背",
+      "category": "社交互动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "53": {
+      "english": "point finger at other person",
+      "chinese": "指向他人",
+      "category": "社交互动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "54": {
+      "english": "hugging other person",
+      "chinese": "拥抱他人",
+      "category": "社交互动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "55": {
+      "english": "giving something",
+      "chinese": "给予物品",
+      "category": "社交互动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "56": {
+      "english": "touch other person's pocket",
+      "chinese": "摸他人口袋",
+      "category": "异常行为",
+      "risk_level": "高",
+      "is_critical": true
+    },
+    "57": {
+      "english": "handshaking",
+      "chinese": "握手",
+      "category": "社交互动",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "58": {
+      "english": "walking towards each other",
+      "chinese": "相向而行",
+      "category": "基本动作",
+      "risk_level": "低",
+      "is_critical": false
+    },
+    "59": {
+      "english": "walking apart",
+      "chinese": "分开行走",
+      "category": "基本动作",
+      "risk_level": "低",
+      "is_critical": false
+    }
+  },
+  "categories": {
+    "日常活动": {
+      "description": "正常的日常生活活动",
+      "monitoring_level": "低"
+    },
+    "基本动作": {
+      "description": "基础的身体动作",
+      "monitoring_level": "中"
+    },
+    "手势动作": {
+      "description": "手部和头部的表达性动作",
+      "monitoring_level": "低"
+    },
+    "运动行为": {
+      "description": "体育或运动相关的动作",
+      "monitoring_level": "中"
+    },
+    "健康状况": {
+      "description": "可能反映健康问题的动作",
+      "monitoring_level": "高"
+    },
+    "异常行为": {
+      "description": "不寻常或可疑的行为",
+      "monitoring_level": "高"
+    },
+    "紧急情况": {
+      "description": "需要立即关注的紧急情况",
+      "monitoring_level": "紧急"
+    },
+    "攻击行为": {
+      "description": "攻击性或暴力行为",
+      "monitoring_level": "紧急"
+    },
+    "社交互动": {
+      "description": "人与人之间的互动行为",
+      "monitoring_level": "低"
+    },
+    "情绪表达": {
+      "description": "情绪和感情的表达",
+      "monitoring_level": "低"
+    },
+    "意外事件": {
+      "description": "意外发生的事件",
+      "monitoring_level": "中"
+    },
+    "动作行为": {
+      "description": "一般性的动作行为",
+      "monitoring_level": "低"
+    }
+  },
+  "critical_actions": [4, 7, 8, 40, 41, 42, 43, 44, 45, 46, 47, 49, 50, 51, 56],
+  "emergency_actions": [42, 47],
+  "health_related_actions": [40, 43, 44, 45, 46, 47]
+}
