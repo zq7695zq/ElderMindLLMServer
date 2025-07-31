@@ -124,7 +124,7 @@ public class ActionMappingController {
      * 获取动态生成的system-prompt
      */
     @GetMapping("/prompt/system")
-    public ResponseEntity<Map<String, String>> getSystemPrompt(@RequestParam(defaultValue = "detailed") String mode) {
+    public ResponseEntity<Map<String, String>> getSystemPrompt(@RequestParam(defaultValue = "simple") String mode) {
         try {
             String prompt = promptGeneratorService.generatePromptByMode(mode);
             return ResponseEntity.ok(Map.of(

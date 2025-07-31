@@ -74,49 +74,21 @@ public class PromptGeneratorService {
      */
     public String generateSimpleSystemPrompt() {
         StringBuilder prompt = new StringBuilder();
-        
-        prompt.append("你是一名智能视频监测系统，专注于监测人类在室内的行为事件。\n");
-        prompt.append("请分析该视频并识别是否发生了以下关键事件：\n\n");
-        
-        // 获取关键动作列表
-        List<String> emergencyActions = actionMappingService.getEmergencyActionNames();
-        List<String> healthActions = actionMappingService.getHealthRelatedActionNames();
-        List<String> criticalActions = actionMappingService.getCriticalActionNames();
-        
-        // 紧急事件
-        prompt.append("【紧急事件】：\n");
-        for (int i = 0; i < emergencyActions.size(); i++) {
-            prompt.append(String.format("%d. %s\n", i + 1, emergencyActions.get(i)));
-        }
-        
-        // 健康相关事件
-        prompt.append("\n【健康相关事件】：\n");
-        int counter = emergencyActions.size() + 1;
-        for (String action : healthActions) {
-            if (!emergencyActions.contains(action)) {
-                prompt.append(String.format("%d. %s\n", counter++, action));
-            }
-        }
-        
-        // 其他关键事件
-        prompt.append("\n【其他关键事件】：\n");
-        for (String action : criticalActions) {
-            if (!emergencyActions.contains(action) && !healthActions.contains(action)) {
-                prompt.append(String.format("%d. %s\n", counter++, action));
-            }
-        }
-        
-        prompt.append(String.format("\n%d. 其他\n", counter));
-        
-        prompt.append("\n请以结构化JSON格式输出识别结果，示例如下：\n");
+
+        prompt.append("分析视频中的人体动作行为。\n");
+        prompt.append("输入所有可能的动作，返回结构化结果：\n\n");
+
+        // 获取所有动作列表
+        prompt.append(actionMappingService.generateAllActionsDescription());
+
+        prompt.append("\n返回JSON格式：\n");
         prompt.append("{\n");
-        prompt.append("  \"type\": \"摔倒\",\n");
+        prompt.append("  \"action_id\": 42,\n");
+        prompt.append("  \"action_name\": \"摔倒\",\n");
         prompt.append("  \"confidence\": 0.95,\n");
-        prompt.append("  \"description\": \"详细描述\",\n");
-        prompt.append("  \"risk_level\": \"紧急\",\n");
-        prompt.append("  \"requires_attention\": true\n");
+        prompt.append("  \"description\": \"检测到人员摔倒\"\n");
         prompt.append("}\n");
-        
+
         return prompt.toString();
     }
     

@@ -190,7 +190,7 @@ public class ActionMappingService {
     public String generateCriticalEventsDescription() {
         StringBuilder sb = new StringBuilder();
         sb.append("请重点关注以下关键事件：\n");
-        
+
         // 紧急情况
         sb.append("\n【紧急情况】（需要立即响应）：\n");
         emergencyActions.forEach(actionId -> {
@@ -199,7 +199,7 @@ public class ActionMappingService {
                 sb.append(String.format("- %s (%s)\n", action.getChinese(), action.getEnglish()));
             }
         });
-        
+
         // 健康相关
         sb.append("\n【健康状况】（需要密切关注）：\n");
         healthRelatedActions.forEach(actionId -> {
@@ -208,7 +208,7 @@ public class ActionMappingService {
                 sb.append(String.format("- %s (%s)\n", action.getChinese(), action.getEnglish()));
             }
         });
-        
+
         // 其他关键动作
         sb.append("\n【其他关键动作】：\n");
         criticalActions.forEach(actionId -> {
@@ -217,7 +217,23 @@ public class ActionMappingService {
                 sb.append(String.format("- %s (%s)\n", action.getChinese(), action.getEnglish()));
             }
         });
-        
+
+        return sb.toString();
+    }
+
+    /**
+     * 生成所有动作的简化描述（用于简化版prompt）
+     */
+    public String generateAllActionsDescription() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("可能的动作列表：\n");
+
+        actionMappings.values().stream()
+                .sorted((a, b) -> Integer.compare(a.getId(), b.getId()))
+                .forEach(action -> {
+                    sb.append(String.format("%d. %s\n", action.getId(), action.getChinese()));
+                });
+
         return sb.toString();
     }
     
