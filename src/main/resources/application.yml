@@ -87,12 +87,4 @@ logging:
   file:
     name: logs/eldermind-llm.log
 
-# 管理端点配置
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,metrics
-  endpoint:
-    health:
-      show-details: always
+
